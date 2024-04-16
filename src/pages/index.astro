@@ -1,47 +1,67 @@
-User
 ---
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Informática">
-  <main >
-	<header class="py-5 px-10 flex items-center fixed top-0 w-full justify-between bg-white z-40 text-white">
-		<div class="flex  basis-0 text-[#400711] hover:text-red-700 hover:animate-sway">
-			<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="none"
-			viewBox="0 0 24 24"
-			stroke-width="1.5"
-			stroke="currentColor"
-			class="w-6 h-6">
-			<path
-			stroke-linecap="round"
-			stroke-linejoin="round"
-			d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
-			></path>
-		</svg>
-    </div>
-	<nav class="flex flex-grow justify-end basis-0">
-		<ul class="flex text-[#400711] text-sm [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2">
-			<li><a class="hover:text-red-700" href="#">Historia</a></li>
-			<li><a class="hover:text-red-700" href="#">Testimonios</a></li>
-			<li><a class="hover:text-red-700" href="#">Imágenes</a></li>
-			<li><a class="hover:text-red-700" href="#">Acerca De</a></li>
-			<li><a class="hover:text-red-700" href="#">Contactos</a></li>
-			<li><a class="hover:text-red-700" href="#">P. Egresado</a></li>
-		</ul>
-	</nav>
-</header>
+  <main>
+    <header
+      class="py-5 px-10 flex items-center fixed top-0 w-full justify-between z-40 text-white"
+    >
+      <div
+        class="flex basis-0 text-white hover:text-red-700 hover:animate-sway"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+          ></path>
+        </svg>
+      </div>
+      <nav class="flex flex-grow justify-end basis-0">
+        <ul
+          class="flex text-white text-sm [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2 text-xxl font-bold"
+        >
+          <li><a class="hover:text-red-700" href="#">Historia</a></li>
+          <li><a class="hover:text-red-700" href="#">Testimonios</a></li>
+          <li><a class="hover:text-red-700" href="#">Imágenes</a></li>
+          <li><a class="hover:text-red-700" href="#">Acerca De</a></li>
+          <li><a class="hover:text-red-700" href="#">Contactos</a></li>
+          <li><a class="hover:text-red-700" href="#">P. Egresado</a></li>
+        </ul>
+      </nav>
+    </header>
 
-<section class="bg-black h-screen text-center relative overflow-hidden">
-	<h2>Disfrute de Tesla</h2>
-	<p>SI</p>
+    <section class="bg-black h-screen text-center overflow-hidden">
+      <header class="z-30 relative">
+        <h2 class="text-4xl text-white pt-48 font-bold size mx-24">
+          La modalidad de Informáticamás destacada y relevante del Colegio
+          Nacional E.M.D. Dr. Raúl Peña
+        </h2>
+        <p class="text-white text-light leading-loose pt-8">
+          Somos líderes en innovación tecnológica, excelencia<br />
+          educativa y variedad de programas académicos, egresados, estudiantes y
+          profesores.
+        </p>
+      </header>
 
-	<a href="">Prueba de conduccion</a>
+      <footer class="z-30 relative p-9">
+        <a class="text-white text-xl font-medium bg-[#400711] rounded-full px-3 py-3 hover:bg-red-600" href="#">Conocer Más</a>
+      </footer>
 
-	<div class="absolute top-0 bottom-0">
-		<video autoplay muted loop src="/video.webm"></video>
-	</div>
-</section>
-</main>
+   
+
+      <div class="absolute top-0 bottom-0 bg-[#000]">
+        <img class="object-center" src="/hero.webp" />
+      </div>
+      <div class="absolute inset-0 bg-black opacity-80"></div>
+    </section>
+  </main>
 </Layout>
