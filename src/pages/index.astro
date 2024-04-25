@@ -4,20 +4,28 @@ import LandingHeader from "../components/LandingHeader.astro";
 import HeroSection from "../components/HeroSection.astro";
 import MasInfoSection from "../components/MasInfoSection.astro";
 import ProfesoresSection from "../components/ProfesoresSection.astro";
+import HistoriaSection from "../components/HistoriaSection.astro";
+import Historia2Section from "../components/Historia2Section.astro";
 
 ---
 
 <Layout title="Informática">
   <LandingHeader/>
   <main class="snap-y snap-mandatory relative w-full h-screen overflow-auto">
-    <div class="snap-center">
-      <HeroSection/>
-    </div>  
-    <div class="snap-center">
-      <MasInfoSection />
+    <!--
+
+      <div class="snap-center">
+        <HeroSection/>
+      </div>  
+      <div class="snap-center">
+        <MasInfoSection />
+      </div>
+    -->
+      <div class="snap-center">
+      <HistoriaSection/>
     </div>
     <div class="snap-center">
-      <ProfesoresSection/>
+      <Historia2Section/>
     </div>
   </main>
 </Layout>
