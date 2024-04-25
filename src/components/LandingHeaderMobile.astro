@@ -5,7 +5,7 @@ import Logo from "./Logo.astro";
 <header
 class="py-3 px-10 flex fixed z-40 w-full  text-white">
 <div
-  class="hover:cursor-pointer text-white hover:animate-sway hover:text-red-700 transition-colors duration-300 mx-auto "
+  class="hover:cursor-pointer text-white hover:animate-sway hover:text-red-700 transition-colors duration-300 flex mx-auto  md:mx-0"
 >
 <svg
 xmlns="http://www.w3.org/2000/svg"
@@ -28,9 +28,9 @@ class="w-6 h-6">
 
 <!-- Menu Lateral Izquierdo -->
 <nav
-  class=" hidden md:flex text-white flex-grow justify-end basis-0">
+  class="hidden text-white flex-col md:flex md:justify-end md:basis-0 md:flex-grow ">
   <ul
-    class="flex text-white text-sm [&>li>a]:px-4 [&>li>a]:py-2 text-xxl font-bold">
+    class=" text-white text-sm [&>li>a]:px-4 [&>li>a]:py-2 text-xxl font-bold">
     <li><a class="hover:text-red-700" href="#historia">Historia</a></li>
     <li><a class="hover:text-red-700" href="#">Testimonios</a></li>
     <li><a class="hover:text-red-700" href="#">P. Egresado</a></li>
