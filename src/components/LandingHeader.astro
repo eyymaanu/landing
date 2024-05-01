@@ -1,36 +1,91 @@
----
-
----
-<!--Barra de navegación -->
-<header
-class="py-3 px-10 flex fixed z-40 w-full  text-white">
-<div
-  class="hover:cursor-pointer text-white hover:animate-sway hover:text-red-700 transition-colors duration-300 mx-auto "
->
-<svg xmlns="http://www.w3.org/2000/svg"
-  fill="currentcolor" 
-  class="bi bi-pc-display w-8 h-8" 
-  viewBox="0 0 24 24">
-  <path d="M8 1a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1zm1 13.5a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0m2 0a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0M9.5 1a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM9 3.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1h-5a.5.5 0 0 0-.5.5M1.5 2A1.5 1.5 0 0 0 0 3.5v7A1.5 1.5 0 0 0 1.5 12H6v2h-.5a.5.5 0 0 0 0 1H7v-4H1.5a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5H7V2z"/>
-</svg>
- 
-</div>
-
-
-
-
-<!-- Menu Lateral Izquierdo -->
-<nav
-  class=" hidden md:flex text-white flex-grow justify-end basis-0">
-  <ul
-    class="flex text-white text-sm [&>li>a]:px-4 [&>li>a]:py-2 text-xxl font-bold">
-    <li><a class="hover:text-red-700" href="#historia">Historia</a></li>
-    <li><a class="hover:text-red-700" href="#">Testimonios</a></li>
-    <li><a class="hover:text-red-700" href="#">P. Egresado</a></li>
-    <li><a class="hover:text-red-700" href="#">Imágenes</a></li>
-    <li><a class="hover:text-red-700" href="#">Acerca De</a></li>
-    <li><a class="hover:text-red-700" href="#">Contactos</a></li>
-  </ul>
-</nav>
+<!-- Barra de navegación -->
+<header id="logoh" class=" md:bg-transparent  py-5 px-10 flex fixed z-50 w-full justify-center text-white">
+  <div  class="text-white hover:animate-float hover:cursor-pointer hover:text-red-700 transition-colors duration-500 delay-100">
+    <svg id="toggle-menu" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-pc-display w-8 h-8" viewBox="0 0 24 24">
+      <path d="M8 1a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1zm1 13.5a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0m2 0a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0M9.5 1a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM9 3.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1h-5a.5.5 0 0 0-.5.5M1.5 2A1.5 1.5 0 0 0 0 3.5v7A1.5 1.5 0 0 0 1.5 12H6v2h-.5a.5.5 0 0 0 0 1H7v-4H1.5a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5H7V2z"/>
+    </svg>
+  </div>
+  <div id="menu-backdrop" class=" 
+  absolute 
+  bg-white/70 
+  backdrop-blur-sm 
+  rounded 
+  translate-x-[var(--left)] translate-y-[var(--top)] 
+  left-0 top-0 md-top-1 w-[var(--width)] h-[var(--height)]
+   transition-all duration-500 ease-in-out opacity-0 
+   "></div>
+  <!-- Menu Lateral Izquierdo -->
+  <nav id="landing-header" class="hidden md:flex text-white md:flex-grow md:justify-end md:basis-0">
+    <ul class="h-screen md:h-auto md:relative absolute top-[100%] md:top-[0%] left-0 right-0 text-center  md:bg-transparent md:flex-row my-2 items-center md:my-0 flex flex-col  text-white text-sm [&>li>a]:px-4 [&>li>a]:py-2 text-xxl font-bold w-[767px]max-w-[767px]" >
+      <li><a class="hover:text-red-600 duration-700 transition-all w-96" href="#historia">Historia</a></li>
+      <li><a class="hover:text-red-600 duration-700 transition-all w-[100px]" href="#">Testimonios</a></li>
+      <li><a class="hover:text-red-600 duration-700 transition-all " href="#">P. Egresado</a></li>
+      <li><a class="hover:text-red-600 duration-700 transition-all " href="#">Imágenes</a></li>
+      <li><a class="hover:text-red-600 duration-700 transition-all " href="#">Acerca De</a></li>
+      <li><a class="hover:text-red-600 hover:duration-700 hover:transition-all" href="#">Contactos</a></li>
+    </ul>
+  </nav>
+  <nav id="modal-menu" class="hidden md:hidden  flex-col bg-[#fff] fixed top-0 left-0 right-0 bottom-0 ">
+    <button id="close-btn" class=" w-screen flex justify-end p-5">
+      <img  class="text-black h-6 " src="/close-icon.svg" alt="close image">
+    </button>
+      <ul
+      class="flex flex-col mt-4 [&>li>a]:transition-colors [&>li]:m-3  [&>li>a]:flex [&>li>a]:justify-between [&>li>a]:duration-200 [&>li>a]:text-black [&>li>a]:font-medium xl::[&>li>a]:inline-block [&>li>a]:px-6 [&>li>a]:py-3 [&>li>a]:rounded-md [&>li>a]:w-full"
+      >
+        <li><a class="hover:bg-slate-100" href="#home"> Home <img class="h-5" alt="arrow icon" src="/arrow-icon.svg"></a> </li>
+        <li><a class="hover:bg-slate-100" href="#historia">Historia<img class="h-5" alt="arrow icon" src="/arrow-icon.svg"></a></li>
+        <li><a class="hover:bg-slate-100" href="#model-3">Testimonios<img class="h-5" alt="arrow icon" src="/arrow-icon.svg"></a></li>
+        <li><a class="hover:bg-slate-100" href="#model-x">Perfil Del Egresado<img class="h-5" alt="arrow icon" src="/arrow-icon.svg"></a></li>
+        <li><a class="hover:bg-slate-100" href="#model-y">Imagenes<img class="h-5" alt="arrow icon" src="/arrow-icon.svg"></a></li>
+        <li><a class="hover:bg-slate-100" href="#powerwall">Contacto<img class="h-5" alt="arrow icon" src="/arrow-icon.svg"></a></li>
+        <li><a class="hover:bg-slate-100" href="#accesorios">Acerca De<img class="h-5" alt="arrow icon" src="/arrow-icon.svg"></a></li>
+    </ul>
+  </nav>
 </header>
-<!-- Hero -->
+
+<!-- Script para la barra de navegación móvil -->
+<script >
+  const menuBtn = document.getElementById('toggle-menu');
+  const modalMenu = document.querySelector("#modal-menu")
+  const menuItems = modalMenu.querySelectorAll('li>a');
+  const closeBtn = document.querySelector("#close-btn")
+  
+  function toggleDropdownMenu() {
+    modalMenu.classList.toggle('hidden');
+  }
+
+
+  menuBtn.addEventListener('click',toggleDropdownMenu)
+
+  closeBtn.addEventListener('click',toggleDropdownMenu)
+
+  menuItems.forEach(Item => {
+    Item.addEventListener('click',toggleDropdownMenu);
+});
+</script>
+
+<script>
+  
+  const listItem = document.querySelectorAll("#landing-header li")
+  const menuBackDrop = document.querySelector("#menu-backdrop") as HTMLElement
+
+  listItem.forEach((item) => {
+    item.addEventListener("mouseenter", () => {
+      const { left, top, width, height } = item.getBoundingClientRect()
+
+      menuBackDrop.style.setProperty("--left", `${left}px`)
+      menuBackDrop.style.setProperty("--top", `${top}px`)
+      menuBackDrop.style.setProperty("--width", `${width}px`)
+      menuBackDrop.style.setProperty("--height", `${height}px`)
+
+      menuBackDrop.style.opacity = "1"
+      menuBackDrop.style.visibility = "visible"
+    })
+
+    item.addEventListener("mouseleave", () => {
+      menuBackDrop.style.opacity = "0"
+      menuBackDrop.style.visibility = "hidden"
+    })
+  })
+  
+</script>
