@@ -14,6 +14,7 @@ Capturas de Pantalla
 ¡Echa un vistazo a cómo luce nuestra página web!
 
 ![Captura de Pantalla](../master/public/captura.png)
+[Página web de MultiBTI](https://multibti.vercel.app)
 
 
 
