@@ -13,7 +13,7 @@ Capturas de Pantalla
 
 ¡Echa un vistazo a cómo luce nuestra página web!
 
-![Captura de Pantalla](../public/captura.png)
+![Captura de Pantalla](../master/public/captura.png)
 
 
 
