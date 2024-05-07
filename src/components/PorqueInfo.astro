@@ -1,20 +1,52 @@
-<section class="h-screen mx-auto relative  flex items-center justify-center">
-    <main>
-      <div class="z-30 relative flex flex-col justify-center items-center text-justify ">
-        <!-- Contenido del lado izquierdo -->
-        <div class="h-screen w-full pt-12 overflow-hidden  text-justify">
-          <p id="historia" class="  text-white  text-sm  md:text-2xl font-extralight text-justify md:mx-10 mx-5 ">
-            Estudiar en el bachillerato técnico en Informática es una decisión inteligente y altamente beneficiosa por diversas razones. En primer lugar, en un mundo cada vez más digitalizado, la informática se ha convertido en un pilar fundamental en casi todos los aspectos de la vida moderna. Desde la comunicación hasta la gestión de datos y la resolución de problemas, el conocimiento en informática es una habilidad imprescindible en el mercado laboral actual y futuro. <br> <br>
-            Además, este campo ofrece una amplia gama de oportunidades profesionales, desde el desarrollo de software hasta la ciberseguridad y la inteligencia artificial, lo que brinda a los estudiantes una variedad de opciones para especializarse según sus intereses y habilidades. Asimismo, el bachillerato técnico en Informática proporciona una base sólida en matemáticas y lógica, habilidades que son fundamentales no solo en el campo de la informática, sino también en muchas otras áreas profesionales.<br>  Por último, pero no menos importante, esta formación brinda a los estudiantes la capacidad de adaptarse y mantenerse actualizados en un entorno tecnológico en constante evolución, lo que les permite ser competitivos y exitosos en el mercado laboral del siglo XXI
-           <br><br> En 25 años egresaron 23 promociones de estudiantes capacitados para insertarse al campo laboral y desempeñarse eficiente y eficazmente en pequeñas y medianas empresas de servicios públicos y/o privados.
-            
-</p>
-</div>
-</div>
-    
+
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Pantalla Completa</title>
+    <style>
+      /* Estilos para la sección y el video */
+      .bg-black {
+        background-color: black; /* Fondo negro */
+        height: 100vh; /* Altura de pantalla completa */
+        display: flex; /* Para centrar contenido verticalmente */
+        justify-content: center; /* Para centrar contenido verticalmente */
+        align-items: center; /* Para centrar contenido verticalmente */
+      }
+      .video-container {
+        position: absolute; /* Posicionamiento absoluto para cubrir la pantalla */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1; /* Coloca el video detrás del contenido */
+        overflow: hidden; /* Oculta el desbordamiento del video */
+      }
+      .video-container video {
+        width: 100%; /* Ajusta el ancho del video */
+        filter: brightness(0.5) saturate(0.5) contrast(1.2); /* Filtro para oscurecer */
+      }
+      /* Otros estilos para texto y enlaces */
+      .text-white {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="bg-black text-center relative">
+      <header class="z-30 relative overflow-hidden">
+        <p id="pq" class="text-white text-sm md:text-lg mx-7 text-justify">Estudiar en el bachillerato técnico en Informática es una decisión inteligente y altamente beneficiosa por diversas razones. En primer lugar, en un mundo cada vez más digitalizado, la informática se ha convertido en un pilar fundamental en casi todos los aspectos de la vida moderna. Desde la comunicación hasta la gestión de datos y la resolución de problemas, el conocimiento en informática es una habilidad imprescindible en el mercado laboral actual y futuro. <br> <br>
+          Además, este campo ofrece una amplia gama de oportunidades profesionales, desde el desarrollo de software hasta la ciberseguridad y la inteligencia artificial, lo que brinda a los estudiantes una variedad de opciones para especializarse según sus intereses y habilidades. Asimismo, el bachillerato técnico en Informática proporciona una base sólida en matemáticas y lógica, habilidades que son fundamentales no solo en el campo de la informática, sino también en muchas otras áreas profesionales.<br>  
+         </p>
+      </header>
+      <!-- Contenedor del video -->
+      <div class="video-container">
+        <video
+          class="object-center object-cover h-full w-full bg-cover bg-no-repeat"
+          autoplay
+          muted
+          loop
+          src="/video.webm"
+        ></video>
       </div>
-      <!-- CTA -->
-      <div slot="background" class="absolute inset-0 bg-[#400711] opacity-100"></div>
-    </main>
-  </section>
-  
+    </section>
